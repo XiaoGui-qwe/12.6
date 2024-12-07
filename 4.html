@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .required,
+      #img {
+           color: red;
+           position: relative;
+           top: 2px;
+      }
+
+      #texts {
+        color: red;
+      }
+    </style>
+</head>
+<body>
+<div>
+    <span class="required">*</span>
+    <span>设置密码:</span>
+    <input type="text" id="text" placeholder="请输入密码" onblur="checkPassword()">
+    <img src="" alt="" id="img">
+    <span id="texts"></span>
+</div>
+<script>
+    function checkPassword() {
+        var reg = /^[a-zA-Z0-9]{6,16}$/;
+        var imges;
+        var texts;
+        var password = document.getElementById("text").value;
+        if (password == "") {
+            imges ="./images/wrong.png";
+            texts = "请输入登录密码";
+        }else if(password.length < 6 || password.length > 16){
+            imges ="./images/wrong.png";
+            texts = "密码格式不正确";
+        }else if (reg.test(password)) {
+            imges ="./images/right.png";
+            texts = "密码格式正确";
+            var testColor = document.getElementById('texts').style.color="green";
+            
+        }
+        document.getElementById("img").src = imges;
+        document.getElementById("texts").innerHTML = texts;
+    }
+    document.getElementById("text").addEventListener("input", checkPassword);
+</script>
+
+</body>
+</html>

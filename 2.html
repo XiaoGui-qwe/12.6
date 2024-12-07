@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 220px;
+            border: 1px solid rgb(155, 154, 154);
+            margin: 0 auto;
+            position: relative;
+            display: block;
+        }
+
+        .box div {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            color: orangered;
+            text-align: center;
+        }
+
+
+        .box img {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+        }
+
+        input[type="button"] {
+            position: absolute;
+            left: 412.5px;
+            width: 30px;
+            height: 30px;
+            border: none;
+            background-color: orangered;
+            color: white;
+            font-size: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <input type="button" value="×" id="close">
+    <div class="box">
+        <div>手机淘宝</div>
+        <img src="./images/tao.png" alt="">
+    </div>
+</body>
+<script>
+var button = document.querySelector('#close');
+button.addEventListener('click', none)
+ function none() {
+    document.querySelector('.box').style.display = 'none';
+}
+</script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        ul li {
+            list-style: none;
+            float: left;
+            width: 140px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+           border: 1px solid #ccc;
+        }
+        
+        .box {
+            width: 610px;
+            height: 400px;
+            margin: 100px auto;
+            position: relative;
+            
+        }
+
+        .icon {
+            background-image: url(./images/sprite.png);
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 40px;
+            vertical-align: text-top;
+            margin-top: 20px;
+            margin-left: 60px;
+        }
+
+        .iconText {
+            margin-top: -40px;
+            margin-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="icon"></div>
+                    <div class="iconText">充话费</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon"></div>
+                    <div class="iconText">旅行</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon"></div>
+                    <div class="iconText">车险</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon"></div>
+                    <div class="iconText">游戏</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon"></div>
+                    <div class="iconText">彩票</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon"></div>
+                    <div class="iconText">电影</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon"></div>
+                    <div class="iconText">酒店</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon"></div>
+                    <div class="iconText">理财</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var icon =document.querySelectorAll(".icon");
+    for(var i=0;i<icon.length;i++){
+        var index =i * 44;
+        icon[i].style.backgroundPosition = '0-' +index+ 'px';
+    }
+</script>
+</html>

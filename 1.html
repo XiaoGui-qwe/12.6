@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+            text-align: center;
+            font-size: 30px;
+            color: #333;
+        }
+        
+        img {
+            width: 400px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="dateing"></h1>
+    <img id="img" src="" alt="" >
+</body>
+<script>
+    function showDate() {
+        var data =new Date();
+        var hours = data.getHours();
+        var dateing;
+        var imges;
+
+        if(hours >=5 && hours <12){
+            dateing ="早上好啊！";
+            imges ="./images/zao.jpeg";
+        }else if (hours >=12 && hours <18 ){
+            dataing ="下午好啊！";
+            imges ="./images/wu.gif";
+        }else{
+            dateing ="晚上好啊！";
+            imges ="./images/wan.jpeg";
+        }
+
+        document.getElementById("dateing").innerHTML = dateing;
+        document.getElementById("img").src = imges;
+    }
+
+    showDate();
+</script>
+</html>
